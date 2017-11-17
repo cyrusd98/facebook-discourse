@@ -62,7 +62,7 @@ def string_category(s):
             type = enums.Document.Type.PLAIN_TEXT)
 
         categories = client.classify_text(document).categories
-        
+
         retval = []
         for category in categories:
             retval.append((category.name, category.confidence))
